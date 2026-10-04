@@ -1,0 +1,131 @@
+{
+  "Tool": "WinSecureAudit",
+  "Version": "0.1.1",
+  "SchemaVersion": "1.0",
+  "GeneratedUtc": "2026-10-04T09:13:36.8363908Z",
+  "Synthetic": true,
+  "ComputerName": "SYNTHETIC-PC",
+  "OperatingSystem": "Simulated Windows",
+  "IsAdministrator": false,
+  "Assessment": "Limited local configuration review; not a Microsoft score, full security assessment or compliance certification.",
+  "Summary": {
+    "Total": 12,
+    "Assessed": 3,
+    "Pass": 1,
+    "Warn": 1,
+    "Fail": 1,
+    "Unknown": 9,
+    "PassRatePercent": 33.3,
+    "CoveragePercent": 25.0
+  },
+  "Findings": [
+    {
+      "Id": "WSA-DEF-001",
+      "Control": "Defender real-time protection",
+      "Severity": "High",
+      "Status": "WARN",
+      "Evidence": "Synthetic: Defender real-time protection disabled; alternative protection requires review.",
+      "Recommendation": "Verify active protection from Defender or an approved alternative. This check does not assess third-party antivirus health.",
+      "ErrorId": null
+    },
+    {
+      "Id": "WSA-FW-DOMAIN",
+      "Control": "Firewall: Domain",
+      "Severity": "High",
+      "Status": "PASS",
+      "Evidence": "Synthetic: Domain profile enabled.",
+      "Recommendation": "Review the effective Windows Firewall profile and enable it through your approved management process.",
+      "ErrorId": null
+    },
+    {
+      "Id": "WSA-FW-PRIVATE",
+      "Control": "Firewall: Private",
+      "Severity": "High",
+      "Status": "FAIL",
+      "Evidence": "Synthetic: Private profile disabled.",
+      "Recommendation": "Review the effective Windows Firewall profile and enable it through your approved management process.",
+      "ErrorId": null
+    },
+    {
+      "Id": "WSA-FW-PUBLIC",
+      "Control": "Firewall: Public",
+      "Severity": "High",
+      "Status": "UNKNOWN",
+      "Evidence": "Synthetic example: no live collection performed.",
+      "Recommendation": "Review the effective Windows Firewall profile and enable it through your approved management process.",
+      "ErrorId": null
+    },
+    {
+      "Id": "WSA-BL-001",
+      "Control": "BitLocker: OS volume",
+      "Severity": "High",
+      "Status": "UNKNOWN",
+      "Evidence": "Synthetic example: no live collection performed.",
+      "Recommendation": "Review encryption and protection state. Before planned changes, confirm recovery-key escrow and compatibility. No recovery keys are collected.",
+      "ErrorId": null
+    },
+    {
+      "Id": "WSA-BOOT-001",
+      "Control": "Secure Boot",
+      "Severity": "High",
+      "Status": "UNKNOWN",
+      "Evidence": "Synthetic example: no live collection performed.",
+      "Recommendation": "Review UEFI support and boot compatibility before enabling Secure Boot. Unavailable readings do not prove that it is disabled.",
+      "ErrorId": null
+    },
+    {
+      "Id": "WSA-SMB-001",
+      "Control": "SMBv1 server",
+      "Severity": "High",
+      "Status": "UNKNOWN",
+      "Evidence": "Synthetic example: no live collection performed.",
+      "Recommendation": "Identify legacy dependencies and plan removal of SMBv1 server support.",
+      "ErrorId": null
+    },
+    {
+      "Id": "WSA-SMB-002",
+      "Control": "SMBv1 optional components",
+      "Severity": "High",
+      "Status": "UNKNOWN",
+      "Evidence": "Synthetic example: no live collection performed.",
+      "Recommendation": "Review enabled SMBv1 client/server components and pending restarts. Missing feature APIs require manual verification.",
+      "ErrorId": null
+    },
+    {
+      "Id": "WSA-UAC-001",
+      "Control": "UAC: EnableLUA",
+      "Severity": "High",
+      "Status": "UNKNOWN",
+      "Evidence": "Synthetic example: no live collection performed.",
+      "Recommendation": "Review UAC EnableLUA and the broader elevation policy; this check does not validate every UAC setting or pending reboot.",
+      "ErrorId": null
+    },
+    {
+      "Id": "WSA-GUEST-001",
+      "Control": "Built-in local Guest",
+      "Severity": "Medium",
+      "Status": "UNKNOWN",
+      "Evidence": "Synthetic example: no live collection performed.",
+      "Recommendation": "Verify the local account with SID suffix -501 and disable it unless there is a documented, approved requirement.",
+      "ErrorId": null
+    },
+    {
+      "Id": "WSA-RDP-001",
+      "Control": "Remote Desktop / NLA",
+      "Severity": "High",
+      "Status": "UNKNOWN",
+      "Evidence": "Synthetic example: no live collection performed.",
+      "Recommendation": "Confirm business need, NLA, approved remote access and network restrictions. These registry checks do not prove reachability or effective session behavior.",
+      "ErrorId": null
+    },
+    {
+      "Id": "WSA-LOG-001",
+      "Control": "Windows PowerShell machine logging policy",
+      "Severity": "Medium",
+      "Status": "UNKNOWN",
+      "Evidence": "Synthetic example: no live collection performed.",
+      "Recommendation": "Review machine-level Script Block Logging and access/retention for its logs. User policy, PowerShell 7 and actual event generation are outside this check.",
+      "ErrorId": null
+    }
+  ]
+}

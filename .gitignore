@@ -1,0 +1,8 @@
+reports/*
+!reports/sample-report.html
+!reports/sample-report.json
+*.zip
+*.rar
+.env
+.env.*
+*.log
